@@ -100,7 +100,10 @@ const MARKER_POSITION = {
 class MapContainer extends React.Component {
   render() {
     return (
-      <LoadScript id="script-loader" googleMapsApiKey={$GATSBY_GOOGLE_KEY}>
+      <LoadScript
+        id="script-loader"
+        googleMapsApiKey={process.env.GATSBY_GOOGLE_KEY}
+      >
         <GoogleMap
           id="example-map"
           center={center}
