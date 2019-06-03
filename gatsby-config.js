@@ -2,6 +2,7 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 module.exports = {
+  pathPrefix: "/thangs-wangs-and-waffles",
   siteMetadata: {
     title: `Thang's Wangs & Waffles`,
     description: `Independent food truck cooking up crispy chicken wangs & fluffy waffles. Now servicing the greater Raleigh-Durham area.`,
