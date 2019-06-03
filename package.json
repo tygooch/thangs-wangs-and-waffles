@@ -41,13 +41,13 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "node ./scripts/create-env.js && gatsby build",
+    "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "deploy": "node ./scripts/create-env && npm run build"
+    "deploy": "npm run build"
   },
   "repository": {
     "type": "git",
