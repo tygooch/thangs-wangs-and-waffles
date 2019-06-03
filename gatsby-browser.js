@@ -1,7 +1,19 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+import React from "react"
+import Layout from "./src/components/layout"
+import { transitions, positions, Provider as AlertProvider } from "react-alert"
+import AlertTemplate from "./src/components/alertTemplate"
 
-// You can delete this file if you're not using it
+const options = {
+  position: "bottom right",
+  timeout: 5000,
+  offset: "30px",
+  transition: "scale",
+}
+
+export const wrapPageElement = ({ element, props }) => {
+  return (
+    <AlertProvider template={AlertTemplate} {...options}>
+      <Layout {...props}>{element}</Layout>
+    </AlertProvider>
+  )
+}

@@ -1,50 +1,42 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { fas } from "@fortawesome/pro-solid-svg-icons"
+import { fal } from "@fortawesome/pro-light-svg-icons"
+import { far } from "@fortawesome/pro-regular-svg-icons"
+import { useAlert } from "react-alert"
 
 import Header from "./header"
 import "./layout.css"
 
-const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
-      <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
-          <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
-        </div>
-      </>
-    )}
-  />
-)
+library.add(fas, far, fal)
+
+const Layout = ({ children }) => {
+  return (
+    <div
+      id="outer-container"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        minHeight: window.innerHeight,
+      }}
+    >
+      <Header />
+      <main id="page-wrap">
+        {children}
+        {/* <footer>
+          <div
+            style={{
+              textAlign: "center",
+            }}
+          >
+            &copy; 2019 Thang's Wang's & Waffles
+          </div>
+        </footer> */}
+      </main>
+    </div>
+  )
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
