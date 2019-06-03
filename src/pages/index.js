@@ -75,10 +75,10 @@ const Slideshow = ({ data }) => {
 }
 
 const Index = props => (
-  <div className="index">
+  <>
     <SEO title="Thang's Wangs & Waffles" />
     <Slideshow data={props.data} />
-  </div>
+  </>
 )
 
 export default Index

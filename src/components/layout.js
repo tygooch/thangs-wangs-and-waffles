@@ -19,7 +19,7 @@ library.add(fas, far, fal)
 const Layout = ({ children }) => {
   return (
     <div
-      id={"outer-container"}
+      id="outer-container"
       style={{
         display: "flex",
         flexDirection: "column",
