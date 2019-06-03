@@ -77,32 +77,30 @@ import foodTruckIcon from "../images/foodTruckIcon2.svg"
 const Index = props => (
   <div className="index">
     <SEO title="Thang's Wangs & Waffles" />
-    <div style={{ width: "100%" }}>
-      <BackgroundSection />
-    </div>
+    <div style={{ width: "100%" }}>{/* <BackgroundSection /> */}</div>
   </div>
 )
 
-const BackgroundSection = ({ className }) => (
-  <StaticQuery
-    query={graphql`
-      query {
-        desktop: file(relativePath: { eq: "wafflesBuffalo.jpg" }) {
-          childImageSharp {
-            fluid(quality: 90, maxWidth: 4160) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-      }
-    `}
-    render={data => {
-      const imageData = data.desktop.childImageSharp.fluid
-      return (
-        <BackgroundImage className={"waffle-background"} fluid={imageData} />
-      )
-    }}
-  />
-)
+// const BackgroundSection = ({ className }) => (
+//   <StaticQuery
+//     query={graphql`
+//       query {
+//         desktop: file(relativePath: { eq: "wafflesBuffalo.jpg" }) {
+//           childImageSharp {
+//             fluid(quality: 90, maxWidth: 4160) {
+//               ...GatsbyImageSharpFluid_withWebp
+//             }
+//           }
+//         }
+//       }
+//     `}
+//     render={data => {
+//       const imageData = data.desktop.childImageSharp.fluid
+//       return (
+//         <BackgroundImage className={"waffle-background"} fluid={imageData} />
+//       )
+//     }}
+//   />
+// )
 
 export default Index
