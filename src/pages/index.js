@@ -8,53 +8,53 @@ import SEO from "../components/seo"
 import "./index.css"
 import foodTruckIcon from "../images/foodTruckIcon2.svg"
 
-export const slideshowImage = graphql`
-  fragment slideshowImage on File {
-    childImageSharp {
-      fluid(maxHeight: 500, maxWidth: 1200) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-`
+// export const slideshowImage = graphql`
+//   fragment slideshowImage on File {
+//     childImageSharp {
+//       fluid(maxHeight: 500, maxWidth: 1200) {
+//         ...GatsbyImageSharpFluid
+//       }
+//     }
+//   }
+// `
 
-export const staticQuery = graphql`
-  query {
-    waffles4: file(relativePath: { eq: "waffles4.jpg" }) {
-      ...slideshowImage
-    }
-    waffles5: file(relativePath: { eq: "waffles5.jpg" }) {
-      ...slideshowImage
-    }
-    waffles2: file(relativePath: { eq: "waffles2.jpg" }) {
-      ...slideshowImage
-    }
-    waffles3: file(relativePath: { eq: "waffles3.jpg" }) {
-      ...slideshowImage
-    }
-  }
-`
+// export const staticQuery = graphql`
+//   query {
+//     waffles4: file(relativePath: { eq: "waffles4.jpg" }) {
+//       ...slideshowImage
+//     }
+//     waffles5: file(relativePath: { eq: "waffles5.jpg" }) {
+//       ...slideshowImage
+//     }
+//     waffles2: file(relativePath: { eq: "waffles2.jpg" }) {
+//       ...slideshowImage
+//     }
+//     waffles3: file(relativePath: { eq: "waffles3.jpg" }) {
+//       ...slideshowImage
+//     }
+//   }
+// `
 
-const NextArrow = ({ className, style, onClick }) => {
-  return (
-    <FontAwesomeIcon
-      icon={["far", "chevron-right"]}
-      className={className}
-      style={{ ...style, display: "block" }}
-      onClick={onClick}
-    />
-  )
-}
-const PrevArrow = ({ className, style, onClick }) => {
-  return (
-    <FontAwesomeIcon
-      icon={["far", "chevron-left"]}
-      className={className}
-      style={{ ...style, display: "block" }}
-      onClick={onClick}
-    />
-  )
-}
+// const NextArrow = ({ className, style, onClick }) => {
+//   return (
+//     <FontAwesomeIcon
+//       icon={["far", "chevron-right"]}
+//       className={className}
+//       style={{ ...style, display: "block" }}
+//       onClick={onClick}
+//     />
+//   )
+// }
+// const PrevArrow = ({ className, style, onClick }) => {
+//   return (
+//     <FontAwesomeIcon
+//       icon={["far", "chevron-left"]}
+//       className={className}
+//       style={{ ...style, display: "block" }}
+//       onClick={onClick}
+//     />
+//   )
+// }
 
 // const Slideshow = ({ data }) => {
 //   const names = Object.keys(data)
@@ -97,7 +97,6 @@ const BackgroundSection = ({ className }) => (
       }
     `}
     render={data => {
-      // Set ImageData.
       const imageData = data.desktop.childImageSharp.fluid
       return (
         <BackgroundImage className={"waffle-background"} fluid={imageData} />
