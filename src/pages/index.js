@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import Carousel from "nuka-carousel"
 
 import SEO from "../components/seo"
 
@@ -77,7 +76,6 @@ const Slideshow = ({ data }) => {
 const Index = props => (
   <>
     <SEO title="Thang's Wangs & Waffles" />
-    {/* <Slideshow data={props.data} /> */}
   </>
 )
 
