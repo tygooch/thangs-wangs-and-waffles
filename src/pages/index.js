@@ -77,7 +77,7 @@ const Slideshow = ({ data }) => {
 const Index = props => (
   <>
     <SEO title="Thang's Wangs & Waffles" />
-    <Slideshow data={props.data} />
+    {/* <Slideshow data={props.data} /> */}
   </>
 )
 
