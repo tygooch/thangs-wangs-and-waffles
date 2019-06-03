@@ -107,7 +107,7 @@ header {
     max-width: 800px;
   }
 
-  #mobileMenu, #hamburger {
+  #mobileMenu, #hamburger, .bm-item-list {
     display: none;
   }
 }
