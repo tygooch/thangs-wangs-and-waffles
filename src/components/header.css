@@ -42,10 +42,6 @@ header {
   padding: 0 !important;
   z-index: 99999;
 }
-
-#mobileMenu {
-  z-index: 999999 !important;
-}
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: absolute !important;
