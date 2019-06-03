@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { GoogleMap, LoadScript, Marker, Size } from "@react-google-maps/api"
-import mapPin from "../images/mapPin2.svg"
+import mapPin from "../images/mapPin3.svg"
 
 const mapStyles = [
   {
