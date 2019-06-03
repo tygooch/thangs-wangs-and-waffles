@@ -102,7 +102,7 @@ class MapContainer extends React.Component {
     return (
       <LoadScript
         id="script-loader"
-        googleMapsApiKey={process.env.GOOGLE_MAPS_API_KEY}
+        googleMapsApiKey={process.env.GATSBY_GOOGLE_KEY}
       >
         <GoogleMap
           id="example-map"
