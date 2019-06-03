@@ -13,7 +13,9 @@ const options = {
 export const wrapPageElement = ({ element, props }) => {
   return (
     <AlertProvider template={AlertTemplate} {...options}>
-      <Layout {...props}>{element}</Layout>
+      <Layout id="outer-container" {...props}>
+        {element}
+      </Layout>
     </AlertProvider>
   )
 }
