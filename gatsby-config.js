@@ -33,7 +33,7 @@ module.exports = {
         name: `Thang's Wangs & Waffles`,
         short_name: `Thang's Wangs`,
         start_url: `/`,
-        icon: "src/images/favicon.ico",
+        icon: "src/images/favicon-32x32.png",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
