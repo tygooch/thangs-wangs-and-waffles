@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import Slider from "react-slick"
+import Carousel from "nuka-carousel"
 
 import SEO from "../components/seo"
 
@@ -11,8 +11,8 @@ import "./index.css"
 export const slideshowImage = graphql`
   fragment slideshowImage on File {
     childImageSharp {
-      fixed(height: 400) {
-        ...GatsbyImageSharpFixed
+      fluid(maxHeight: 500, maxWidth: 1200) {
+        ...GatsbyImageSharpFluid
       }
     }
   }
@@ -61,27 +61,16 @@ const Slideshow = ({ data }) => {
   const images = Object.values(data)
   images.forEach((el, idx) => (el.name = names[idx]))
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    prevArrow: <PrevArrow />,
-    nextArrow: <NextArrow />,
-    autoplay: true,
-    autoplaySpeed: 5000,
-  }
   return (
-    <Slider {...settings}>
+    <Carousel wrapAround={true} withoutControls={true} autoplay={true}>
       {images.map(image => (
         <Img
-          fixed={image.childImageSharp.fixed}
+          fluid={image.childImageSharp.fluid}
           key={image.id}
           alt={image.name.replace(/-/g, " ").substring(2)}
         />
       ))}
-    </Slider>
+    </Carousel>
   )
 }
 
