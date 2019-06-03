@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { scaleDown as Menu } from "react-burger-menu"
 import "hamburgers/dist/hamburgers.min.css"
 
-import thangsWangsLogo from "../images/thangsWangsLogoHorizontal.svg"
+import thangsWangsLogo from "../images/ThangsWangsLogoHorizontal.svg"
 
 import "./header.css"
 
