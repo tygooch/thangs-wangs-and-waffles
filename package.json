@@ -25,8 +25,7 @@
     "react-burger-menu": "^2.6.10",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
-    "react-transition-group": "^4.1.0",
-    "slick-carousel": "^1.8.1"
+    "react-transition-group": "^4.1.0"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-pro": "^5.8.2",
