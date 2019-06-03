@@ -33,7 +33,6 @@ module.exports = {
         name: `Thang's Wangs & Waffles`,
         short_name: `Thang's Wangs`,
         start_url: `/`,
-        icon: `src/images/thangsWangsChicken.svg`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
