@@ -28,6 +28,7 @@ const Layout = ({ children }) => {
         <meta name="theme-color" content="#ffffff" />
       </Helmet>
       <div
+        id={"outer-container"}
         style={{
           display: "flex",
           flexDirection: "column",
